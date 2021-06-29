@@ -1,6 +1,7 @@
 const User = require('./User');
 const Tech = require('./Tech');
-const Category = require('./Category')
+const Category = require('./Category');
+const userTech = require('./userTech');
 
 Tech.belongsTo(Category, {
   foreingKey: 'category_id'
@@ -11,15 +12,17 @@ Category.hasMany(Tech, {
 })
 
 User.belongsToMany(Tech, {
-  through: "userTech",
+  through: {
+    model: userTech
+  },
   as: "user",
-  foreignKey: "tech_id",
 });
 
 Tech.belongsToMany(User, {
-  through: "userTech",
+  through: {
+    model: userTech
+  },
   as: "user",
-  foreingKey: "tech_id"
 })
 
 User.belongsToMany
