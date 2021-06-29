@@ -1,13 +1,30 @@
 const User = require('./User');
-const Gallery = require('./Gallery');
-const Painting = require('./Painting');
+const Tech = require('./Tech');
+const Category = require('./Category');
+const userTech = require('./userTech');
 
-Gallery.hasMany(Painting, {
-  foreignKey: 'gallery_id',
+Tech.belongsTo(Category, {
+  foreingKey: 'category_id'
+})
+
+Category.hasMany(Tech, {
+  foreingKey: 'category_id'
+})
+
+User.belongsToMany(Tech, {
+  through: {
+    model: userTech
+  },
+  as: "user",
 });
 
-Painting.belongsTo(Gallery, {
-  foreignKey: 'gallery_id',
-});
+Tech.belongsToMany(User, {
+  through: {
+    model: userTech
+  },
+  as: "user",
+})
 
-module.exports = { User, Gallery, Painting };
+User.belongsToMany
+
+module.exports = { User, Tech, Category };
