@@ -7,10 +7,13 @@ const seedAll = async () => {
   await sequelize.sync({ force: true });
 
   await seedCategory();
-
-  await seedTech();
+  console.log('CATEGORY SEEDED')
 
   await seedUser();
+  console.log('USERS SEEDED')
+  
+  await seedTech();
+  console.log('TECH SEEDED')
 
   process.exit(0);
 };

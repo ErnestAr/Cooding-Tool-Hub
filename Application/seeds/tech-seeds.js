@@ -20,9 +20,9 @@ const techdata = [
   {
     tech_name: 'Bootstrap',
     description: 
-    "Maya is an animation and modeling program used to create three-dimensional ( 3-D ), full-motion effects. Maya incorporates the natural laws of physics to control the behavior of virtual objects in computer animation. Maya can produce videos that are more life-like than has been possible with less sophisticated programs. Versions are available for both IBM-compatible and Macintosh operating systems.",
+    "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development",
     project: "Disney Short",
-    category_id: 1,
+    category_id: 3,
     user_id: 1,
   },
 ];
