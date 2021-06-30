@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { Category, tech } = require('../models');
+const { Category, tech, User } = require('../models');
+const userTech = require('../models/userTech');
 
 
 // GET all categories for homepage
@@ -43,4 +44,16 @@ router.get('/category/:id', async (req, res) => {
 
 
 
+router.put('/category/:id', async (req, res) => {
+  try {
+    const dbCategoryData = await userTech.update( {
+
+    });
+    const Category = dbCategoryData.get({ plain: true });
+    res.render('homepage', {Category});
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
