@@ -11,12 +11,15 @@ Category.hasMany(Tech, {
   foreingKey: 'category_id'
 })
 
+
 User.belongsToMany(Tech, {
   through: {
     model: userTech
   },
   as: "user",
 });
+
+
 
 Tech.belongsToMany(User, {
   through: {
@@ -25,6 +28,13 @@ Tech.belongsToMany(User, {
   as: "user",
 })
 
-User.belongsToMany
+User.hasMany(Tech, {
+  foreignKey: 'created_id',
+});
+
+Tech.belongsTo(User, {
+  foreignKey: 'created_id',
+});
+
 
 module.exports = { User, Tech, Category };
