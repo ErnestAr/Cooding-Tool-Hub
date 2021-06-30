@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Category, tech, User } = require('../models');
+const { Category, Tech} = require('../models');
 const userTech = require('../models/userTech');
 
 
@@ -8,11 +8,9 @@ router.get('/', async (req, res) => {
   try {
     const dbCategoryData = await Category.findAll({
     });
-
     const categories = dbCategoryData.map((Category) =>
       Category.get({ plain: true })
     );
-
     res.render('homepage', {
       categories,
       loggedIn: req.session.loggedIn,
@@ -23,13 +21,14 @@ router.get('/', async (req, res) => {
   }
 });
 
+
 //GEt one Category and all related technologies by id
 router.get('/category/:id', async (req, res) => {
     try {
       const dbCategoryData = await Category.findByPk(req.params.id, {
         include: [
           {
-            model: tech,
+            model: Tech,
           },
         ],
       });
@@ -39,21 +38,31 @@ router.get('/category/:id', async (req, res) => {
       console.log(err);
       res.status(500).json(err);
     }
-  
 });
 
 
-
-router.put('/category/:id', async (req, res) => {
+router.post(`/category`, async (req, res) => {
   try {
-    const dbCategoryData = await userTech.update( {
-
+    const TechData = await userTech.create({
+      tech_id: req.body.tech_id,
+      user_id: req.body.user_id
     });
-    const Category = dbCategoryData.get({ plain: true });
-    res.render('homepage', {Category});
+    res.status(200).json(TechData)
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+
+module.exports = router;
+
+
+
+
+
+
+
+
+
 

@@ -23,6 +23,10 @@ router.get('/', withAuth, async (req, res) => {
 
 
 
+
+
+
+
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
     res.redirect('/');
@@ -33,6 +37,9 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
+
+
 
 
 
