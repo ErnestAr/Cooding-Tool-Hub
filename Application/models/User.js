@@ -35,15 +35,7 @@ User.init(
         len: [6],
       },
     },
-    created_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'tech',
-          key: 'id'
-        }
     },
-
-  },
   {
     hooks: {
       async beforeCreate(newUserData) {

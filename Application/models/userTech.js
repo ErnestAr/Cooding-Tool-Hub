@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 class userTech extends Model {}
 
-Category.init(
+userTech.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -30,7 +30,8 @@ Category.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'category',
+    modelName: 'userTech',
+    timestamps: false
   }
 );
 

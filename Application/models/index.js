@@ -19,8 +19,6 @@ User.belongsToMany(Tech, {
   as: "user",
 });
 
-
-
 Tech.belongsToMany(User, {
   through: {
     model: userTech
@@ -29,11 +27,11 @@ Tech.belongsToMany(User, {
 })
 
 User.hasMany(Tech, {
-  foreignKey: 'created_id',
+  foreignKey: 'user_id',
 });
 
 Tech.belongsTo(User, {
-  foreignKey: 'created_id',
+  foreignKey: 'user_id',
 });
 
 
