@@ -4,7 +4,7 @@ const userTech = require('../models/userTech');
 
 
 // GET all categories for homepage
-router.get('/', async (req, res) => {
+router.get('/category', async (req, res) => {
   try {
     const dbCategoryData = await Category.findAll({
     });
@@ -15,6 +15,7 @@ router.get('/', async (req, res) => {
       categories,
       loggedIn: req.session.loggedIn,
     });
+    res.status(200).json(categories)
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
