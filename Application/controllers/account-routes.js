@@ -4,7 +4,7 @@ const withAuth = require('../utils/auth');
 const userTech = require('../models/userTech');
 
 //GEt all the created and saved posts on user interface
-router.get('/',  async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       const dbUserData = await User.findOne( {
        
@@ -18,9 +18,7 @@ router.get('/',  async (req, res) => {
           id: req.body.user_id
          },
       });
-
       const userInfo = dbUserData.get({ plain: true });
-
       // placeholder account page
       res.render('account', {
         userInfo,
