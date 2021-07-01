@@ -24,6 +24,10 @@ userTech.init(
         model: 'tech',
         key: 'id'
       }
+    },
+    voted: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
     }
   },
   {
