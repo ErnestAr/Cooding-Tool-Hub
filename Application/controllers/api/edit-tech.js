@@ -19,7 +19,6 @@ router.post('/', async (req, res) => {
     }
   });
 
-
 router.delete("/:id", async (req, res) => {
 try {
     const TechData = await UserTech.destroy( {
@@ -37,6 +36,8 @@ try {
 });
 
 module.exports = router;
+
+
 
 
 
