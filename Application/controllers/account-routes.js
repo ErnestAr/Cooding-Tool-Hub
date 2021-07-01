@@ -18,7 +18,9 @@ router.get('/',  async (req, res) => {
           id: req.body.user_id
          },
       });
+
       const userInfo = dbUserData.get({ plain: true });
+
       // placeholder account page
       res.render('account', {
         userInfo,
@@ -43,6 +45,17 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
+router.get(`/edit/:id`, async (req, res) => {
+  if (req.session.logged_in) {
+    const dbUserData = await User.findByPk(req.session.user_id)
+    const userData = dbUserData.get({ plain: true })
+    res.render('account-edit', {userData})
+    return
+  }
+
+  res.render('login')
+})
 
 
 
