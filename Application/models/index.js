@@ -16,7 +16,7 @@ User.belongsToMany(Tech, {
   through: {
     model: userTech
   },
-  as: "user",
+  as: "tech",
 });
 
 Tech.belongsToMany(User, {

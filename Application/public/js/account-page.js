@@ -9,7 +9,7 @@ const addTech = async (event) => {
   
     if (techName && techDesc && techProject && category) {
       // we can change this to the route later, this is a placeholder
-      const response = await fetch('/api', {
+      const response = await fetch('/api/tech', {
         method: 'POST',
         body: JSON.stringify({ techName, techDesc, techProject, category }),
         headers: { 'Content-Type': 'application/json' }
@@ -27,7 +27,7 @@ const addTech = async (event) => {
 const deleteTech = async (event) => {
   event.preventDefault();
   const currentId = document.querySelector(".form-group").getAttribute("id")
-    const response = await fetch(`/api/${currentId}`, {
+    const response = await fetch(`/api/tech/${currentId}`, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
     });
