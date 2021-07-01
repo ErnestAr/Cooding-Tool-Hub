@@ -1,33 +1,36 @@
 const router = require('express').Router();
-const { User, Tech, Category, userTech } = require('../models');
+const { User, Tech, Category,} = require('../models');
 const withAuth = require('../utils/auth');
+const userTech = require('../models/userTech');
 
 //GEt all the created and saved posts on user interface
-router.get('/', withAuth, async (req, res) => {
+router.get('/',  async (req, res) => {
     try {
-      const dbUserData = await User.findByPk(req.session.user_id, {
-        include: [
-          {
-            model: Tech
-          },
-          {
-            model: userTech
-          }
-        ],
+      const dbUserData = await User.findOne( {
+       
+        include: [{
+          model: Tech,
+          through:userTech, as:'tech'
+        },
+        {model:Tech}
+      ],
+        where: {
+          id: req.body.user_id
+         },
       });
-      const userSaved = UserData.get({ plain: true });
+      const userInfo = dbUserData.get({ plain: true });
       // placeholder account page
-      res.render('account', {userSaved});
+      res.render('account', {
+        userInfo,
+        loggedIn: req.session.loggedIn,
+      });
+      res.status(200).json(userInfo)
+      
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
     }
 });
-
-
-
-
-
 
 
 router.get('/login', (req, res) => {

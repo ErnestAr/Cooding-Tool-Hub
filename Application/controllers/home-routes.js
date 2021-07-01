@@ -8,8 +8,8 @@ router.get('/category', async (req, res) => {
   try {
     const dbCategoryData = await Category.findAll({
     });
-    const categories = dbCategoryData.map((Category) =>
-      Category.get({ plain: true })
+    const categories = dbCategoryData.map((category) =>
+      category.get({ plain: true })
     );
     res.render('homepage', {
       categories,
@@ -33,9 +33,13 @@ router.get('/category/:id', async (req, res) => {
           },
         ],
       });
-      const Category = dbCategoryData.get({ plain: true });
+      const category = dbCategoryData.get({ plain: true });
 
-      res.render('homepage-category', {Category});
+      res.render('homepage-category', {
+        category,
+        loggedIn: req.session.loggedIn,
+      });
+      res.status(200).json(category)
 
     } catch (err) {
       console.log(err);

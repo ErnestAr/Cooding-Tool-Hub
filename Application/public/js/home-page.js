@@ -13,7 +13,7 @@ const openCategory =   (e) => {
 const saveTech = async (event) => {
   event.preventDefault()
   // route is a place holder
-  const response = await fetch('/api/:id', {
+  const response = await fetch('/category', {
     method: 'POST',
     body: JSON.stringify({ techName, techDesc, techProject, category }),
     headers: { 'Content-Type': 'application/json' }
