@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { User, Tech, Category, userTech } = require('../models');
+const { User, Tech, Category,} = require('../models');
 const withAuth = require('../utils/auth');
+const userTech = require('../models/userTech');
 
 //GEt all the created and saved posts on user interface
 router.get('/', withAuth, async (req, res) => {
