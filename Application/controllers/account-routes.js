@@ -15,7 +15,7 @@ router.get('/', withAuth, async (req, res) => {
           }
         ],
       });
-      const userSaved = UserData.get({ plain: true });
+      const userSaved = dbUserData.get({ plain: true });
       // placeholder account page
       res.render('account', {userSaved});
     } catch (err) {
@@ -23,12 +23,6 @@ router.get('/', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
 });
-
-
-
-
-
-
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
@@ -40,6 +34,17 @@ router.get('/login', (req, res) => {
 });
 
 module.exports = router;
+
+router.get(`/edit/:id`, async (req, res) => {
+  if (req.session.logged_in) {
+    const dbUserData = await User.findByPk(req.session.user_id)
+    const userData = dbUserData.get({ plain: true })
+    res.render('account-edit', {userData})
+    return
+  }
+
+  res.render('login')
+})
 
 
 

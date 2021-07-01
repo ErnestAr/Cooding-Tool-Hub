@@ -63,4 +63,19 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// Edit account
+router.post(`/edit/:id`, async (req, res) => {
+  try {
+    const dbUserData = await User.findByPk(req.session.user_id)
+    const userData = await User.update({
+      username: req.body.username,
+      email: req.body.email,
+      password: req.body.password
+    })
+  } catch (error) {
+    console.log(error)
+    res.status(500).json(error)
+  }
+})
+
 module.exports = router;
