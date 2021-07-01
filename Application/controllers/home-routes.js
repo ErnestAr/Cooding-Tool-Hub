@@ -34,7 +34,9 @@ router.get('/category/:id', async (req, res) => {
         ],
       });
       const Category = dbCategoryData.get({ plain: true });
+
       res.render('homepage-category', {Category});
+
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
