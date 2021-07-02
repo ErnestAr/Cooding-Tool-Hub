@@ -1,3 +1,5 @@
+
+const switchers = [...document.querySelectorAll('.switcher')]
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -40,6 +42,17 @@ const signupFormHandler = async (event) => {
     }
   }
 };
+
+
+
+
+switchers.forEach(item => {
+	item.addEventListener('click', function() {
+		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+		this.parentElement.classList.add('is-active')
+	})
+})
+
 
 document
   .querySelector('.login-form')
