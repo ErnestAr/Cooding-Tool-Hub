@@ -2,33 +2,43 @@ const { Tech } = require('../models');
 
 const techdata = [
   {
-    tech_name: 'Maya',
+    tech_name: 'Anime.js',
     description: 
-    "Maya is an animation and modeling program used to create three-dimensional ( 3-D ), full-motion effects. Maya incorporates the natural laws of physics to control the behavior of virtual objects in computer animation. Maya can produce videos that are more life-like than has been possible with less sophisticated programs. Versions are available for both IBM-compatible and Macintosh operating systems.",
-    project: "Disney Short",
-    source: 'https://www.autodesk.ca/en/products/maya/overview?term=1-YEAR',
-    likes: 2,
+
+    "Anime.js (/ˈæn.ə.meɪ/) is a lightweight JavaScript animation library with a simple, yet powerful API. It works with CSS properties, SVG, DOM attributes and JavaScript Objects.",
+    source: 'https://animejs.com/',
     category_id: 1,
+    language_id: 3,
     user_id: 1,
   },
   {
-    tech_name: 'MySQL',
+    tech_name: 'Django',
     description: 
-    "MySQL is an Oracle-backed open source relational database management system (RDBMS) based on Structured Query Language (SQL).",
-    project: "Office Database",
-    source: "https://www.mysql.com/",
-    likes: 4,
+
+    "Django is a Python-based free and open-source web framework that follows the model–template–views architectural pattern. ",
+    source: "https://www.djangoproject.com/",
+
     category_id: 4,
+    language_id: 4,
     user_id: 2,
   },
   {
     tech_name: 'Bootstrap',
     description: 
     "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development",
-    project: "E Commerce Website",
     source: "https://getbootstrap.com/",
     likes: 5,
     category_id: 3,
+    language_id: 2,
+    user_id: 1,
+  },
+  {
+    tech_name: 'TailWind CSS',
+    description: 
+    "Tailwind CSS is basically a utility-first CSS framework for rapidly building custom user interfaces. It is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.",
+    source: "https://tailwindcss.com/",
+    category_id: 3,
+    language_id: 2,
     user_id: 1,
   },
 ];

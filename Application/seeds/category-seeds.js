@@ -11,7 +11,7 @@ const categorydata = [
     category_name: 'Front End Frameworks',
   },
   {
-    category_name: 'Databases',
+    category_name: 'Full Stack Frameworks',
   },
   {
     category_name: 'Website Deployement',

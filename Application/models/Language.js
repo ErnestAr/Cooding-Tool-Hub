@@ -11,7 +11,11 @@ Language.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    Language_name: {
+    language_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    language_image: {
       type: DataTypes.STRING,
       allowNull: false,
     }
