@@ -4,6 +4,7 @@ const techdata = [
   {
     tech_name: 'Anime.js',
     description: 
+
     "Anime.js (/ˈæn.ə.meɪ/) is a lightweight JavaScript animation library with a simple, yet powerful API. It works with CSS properties, SVG, DOM attributes and JavaScript Objects.",
     source: 'https://animejs.com/',
     category_id: 1,
@@ -13,8 +14,10 @@ const techdata = [
   {
     tech_name: 'Django',
     description: 
+
     "Django is a Python-based free and open-source web framework that follows the model–template–views architectural pattern. ",
     source: "https://www.djangoproject.com/",
+
     category_id: 4,
     language_id: 4,
     user_id: 2,
@@ -24,6 +27,7 @@ const techdata = [
     description: 
     "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development",
     source: "https://getbootstrap.com/",
+    likes: 5,
     category_id: 3,
     language_id: 2,
     user_id: 1,

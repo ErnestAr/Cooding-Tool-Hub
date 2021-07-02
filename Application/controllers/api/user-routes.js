@@ -80,9 +80,9 @@ router.put(`/edit/:id`, async (req, res) => {
     // const dbUserData = await User.findByPk(req.session.user_id)
     // const userInfo = dbUserData.get({ plain: true })
     res.status(200).json(userData)
-  } catch (error) {
+  } catch (err) {
     console.log(error)
-    res.status(400).json(error)
+    res.status(400).json(err)
   }
 })
 
