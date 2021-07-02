@@ -7,7 +7,6 @@ const userTech = require('../models/userTech');
 router.get('/', withAuth, async (req, res) => {
     try {
       const dbUserData = await User.findOne( {
-       
         include: [{
           model: Tech,
           through:userTech, as:'tech'
@@ -16,7 +15,7 @@ router.get('/', withAuth, async (req, res) => {
       ],
         where: {
           id: req.body.user_id
-         },
+        },
       });
       const userInfo = dbUserData.get({ plain: true });
       // placeholder account page
@@ -25,10 +24,9 @@ router.get('/', withAuth, async (req, res) => {
         loggedIn: req.session.loggedIn,
       });
       res.status(200).json(userInfo)
-      
     } catch (err) {
       console.log(err);
-      res.status(500).json(err);
+      res.status(500).render('login')
     }
 });
 
@@ -51,9 +49,11 @@ router.get(`/edit/:id`, async (req, res) => {
     res.render('account-edit', {userData})
     return
   }
-
   res.render('login')
 })
+
+
+
 
 
 

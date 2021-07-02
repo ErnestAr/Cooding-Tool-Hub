@@ -15,7 +15,6 @@ router.get('/category', async (req, res) => {
       categories,
       loggedIn: req.session.loggedIn,
     });
-    res.status(200).json(categories)
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -39,8 +38,6 @@ router.get('/category/:id', async (req, res) => {
         category,
         loggedIn: req.session.loggedIn,
       });
-      res.status(200).json(category)
-
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

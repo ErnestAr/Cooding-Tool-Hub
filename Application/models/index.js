@@ -2,6 +2,7 @@ const User = require('./User');
 const Tech = require('./Tech');
 const Category = require('./Category');
 const userTech = require('./userTech');
+const Language = require('./Language');
 
 Tech.belongsTo(Category, {
   foreingKey: 'category_id'
@@ -11,6 +12,13 @@ Category.hasMany(Tech, {
   foreingKey: 'category_id'
 })
 
+Tech.belongsTo(Language, {
+  foreingKey: 'primarylanguage_id'
+})
+
+Language.hasMany(Tech, {
+  foreingKey: 'primarylanguage_id'
+})
 
 User.belongsToMany(Tech, {
   through: {
@@ -34,5 +42,6 @@ Tech.belongsTo(User, {
   foreignKey: 'user_id',
 });
 
-
 module.exports = { User, Tech, Category };
+
+
