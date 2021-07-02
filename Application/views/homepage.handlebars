@@ -1,21 +1,21 @@
 
-<div class="w3-content">
-  <div class="w3-row">
-    {{#each categories as |category|}}
-    <div class="w3-quarter">
-      <div class="container">
-        <div class="card">
-          <div class="imgBx">
-            <img src={{catImg}}>
-          </div>
-          <div class="contentBx">
-            <h2>{{catName}}</h2>
-            <div class="size">
-              <h3>{{description}}</h3>
+{{!-- <div class="w3-content">
+  <div class="w3-row"> --}}
+    <div class="all-cards">
+      {{#each categories as |category|}}
+        <div class="container">
+          <div class="card">
+
+            <div class="contentBx">
+              <h2>{{catName}}</h2>
+              <div class="size">
+                <h3>{{description}}</h3>
+              </div>
+              <a href="#">let's go!</a>
             </div>
-            <a href="#">let's go!</a>
           </div>
         </div>
-    {{/each}}
-      </div>
+      {{/each}}
     </div>
+      {{!-- </div>
+    </div> --}}
