@@ -1,0 +1,331 @@
+h3 {
+    color: #fff;
+    position: relative;
+    margin-right: 0px;
+    display: inherit;
+    float: inline-start;
+}
+
+.h3-titles {
+    position: relative;
+    padding-bottom: 40px;
+    width: 25%;
+    border: 25%;
+    margin: 5px;
+    margin-right: 5px;
+}
+
+.div-titles {
+    font-size: large;
+    color: #fff;
+}
+.our-team {
+  padding: 30px 0 40px;
+  margin-bottom: 30px;
+  background-color: #07575b;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.our-team .picture {
+  display: inline-block;
+  height: 130px;
+  width: 130px;
+  margin-bottom: 50px;
+  z-index: 1;
+  position: relative;
+}
+
+.our-team .picture::before {
+  content: "";
+  width: 100%;
+  height: 0;
+  border-radius: 50%;
+  background-color: #66a5ad;
+  position: absolute;
+  bottom: 135%;
+  right: 0;
+  left: 0;
+  opacity: 0.9;
+  transform: scale(3);
+  transition: all 0.3s linear 0s;
+}
+
+.our-team:hover .picture::before {
+  height: 100%;
+}
+
+.our-team .picture::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #66a5ad;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.our-team .picture img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  transform: scale(1);
+  transition: all 0.9s ease 0s;
+}
+
+.our-team:hover .picture img {
+  box-shadow: 0 0 0 14px #f7f5ec;
+  transform: scale(0.7);
+}
+
+.our-team .title {
+  display: block;
+  font-size: 15px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.our-team .social {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #66a5ad;
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  transition: all 0.5s ease 0s;
+}
+
+.our-team:hover .social {
+  bottom: 0;
+}
+
+.our-team .social li {
+  display: inline-block;
+}
+
+.our-team .social li a {
+  display: block;
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.our-team .social li a:hover {
+  color: #66a5ad;
+  background-color: #f7f5ec;
+}
+
+.name {
+    color: white;
+}
+
+
+  .card {
+    position: relative;
+    min-width: 200px;
+    width: 80%;
+    border-radius: 8px;
+    padding: 12px 8px 24px 8px;
+    overflow: hidden;
+    background: #07575b;
+    display: block;
+    margin-top: 70px;
+    margin-left: 10%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: 200px;
+    background: var(--color4);
+    margin-bottom: 32px;
+    border-radius: inherit;
+  }
+  
+  .card-category {
+    font-size: 0.8rem;
+  }
+  
+  .card-heading {
+    margin: 4px 0 12px;
+  }
+  
+  span{
+    position: relative;
+    display: inline-flex;
+    width: 180px;
+    height: 55px;
+    margin: 0 15px;
+    perspective: 1000px;
+    float: left;
+    margin-left: 0%;
+  }
+  span a{
+    font-size: 19px;
+    letter-spacing: 1px;
+    transform-style: preserve-3d;
+    transform: translateZ(-25px);
+    transition: transform .25s;
+    font-family: 'Montserrat', sans-serif;
+    
+  }
+  span a:before,
+  span a:after{
+    position: absolute;
+    content: "ADD";
+    height: 55px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid black;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  span a:before{
+    color: #fff;
+    background: #000;
+    transform: rotateY(0deg) translateZ(25px);
+  }
+  span a:after{
+    color: #000;
+    transform: rotateX(90deg) translateZ(25px);
+  }
+  span a:hover{
+    transform: translateZ(-25px) rotateX(-90deg);
+  }
+  
+  .button {
+    width: 300px;
+    height: 80px;
+    background: dodgerblue;
+    border-radius: 6px;
+    transition: all .3s cubic-bezier(0.67, 0.17, 0.40, 0.83);
+    position: absolute
+  }
+  
+  .button svg {
+    transform: rotate(180deg);
+    transition: all .5s;
+  }
+  
+  .button__circle {
+    width: 120px;
+    height: 120px;
+    background: mediumseagreen;
+    border-radius: 50%;
+    transform: rotate(-180deg);
+  }
+  
+  .button:hover {
+    cursor: pointer;
+  }
+  
+  .tick {
+    color: white;
+    font-size: 2em;
+    transition: all .9s;
+  }
+
+  
+  i {
+    cursor:pointer;
+    padding:10px 12px 8px;
+    background:#fff;
+    border-radius:50%;
+    display:inline-block;
+    margin:0 0 15px;
+    color:#aaa;
+    transition:.2s;
+  }
+  
+  i:hover {
+    color:#666;
+  }
+  
+  i:before {
+    font-family:fontawesome;
+    content:'\f004';
+    font-style:normal;
+  }
+  
+  span {
+    position: absolute;
+    bottom:70px;
+    left:0;
+    right:0;
+    visibility: hidden;
+    transition:.6s;
+    z-index:-2;
+    font-size:2px;
+    color:transparent;
+    font-weight:400;
+  }
+  
+  i.press {
+    animation: size .4s;
+    color:#e23b3b;
+  }
+  
+  span.press {
+    bottom:120px;
+    font-size:14px;
+    visibility:visible;
+    animation: fade 1s;
+  }
+  
+  
+  @keyframes size {
+    0% {padding:10px 12px 8px;}
+    50% {padding:14px 16px 12px;  
+      margin-top:-4px;}
+    100% {padding:10px 12px 8px;}
+  }
+
+  .noselect {
+    -webkit-touch-callout: none;
+      -webkit-user-select: none;
+       -khtml-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+          -webkit-tap-highlight-color: transparent;
+  }
+  
+  button {
+      float: right;
+      margin-right: 10px;
+      padding: 10px;
+      position: relative;
+      border-radius: 5px;
+      width: 70px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      color: #66a5ad;
+      background: #c4dfe6;
+      border: 2px solid #66a5ad;
+      box-shadow: 5px 5px 0 #66a5ad,
+          -5px -5px 0 #66a5ad,
+          -5px 5px 0 #66a5ad,
+          5px -5px 0 #66a5ad;
+      transition: 500ms ease-in-out;
+  }
+  
+  button:hover {
+      box-shadow: 20px 5px 0 #66a5ad, -20px -5px 0 #66a5ad;
+  }
+  
+  button:focus {
+      outline: none;
+  }
