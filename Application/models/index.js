@@ -13,11 +13,11 @@ Category.hasMany(Tech, {
 })
 
 Tech.belongsTo(Language, {
-  foreingKey: 'primarylanguage_id'
+  foreingKey: 'language_id'
 })
 
 Language.hasMany(Tech, {
-  foreingKey: 'primarylanguage_id'
+  foreingKey: 'language_id'
 })
 
 User.belongsToMany(Tech, {
@@ -43,5 +43,3 @@ Tech.belongsTo(User, {
 });
 
 module.exports = { User, Tech, Category };
-
-

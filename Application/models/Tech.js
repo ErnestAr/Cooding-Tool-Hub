@@ -19,9 +19,9 @@ Tech.init(
       type: DataTypes.STRING(1000),
       allowNull: false,
     },
-    project: {
+    examples: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     source: {
       type: DataTypes.STRING,
@@ -34,7 +34,7 @@ Tech.init(
         key: 'id',
       },
     },
-    primarylanguage_id: {
+    language_id: {
       type: DataTypes.INTEGER,
       references: {
         model: 'language',
