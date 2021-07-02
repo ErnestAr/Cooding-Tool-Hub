@@ -34,6 +34,13 @@ Tech.init(
         key: 'id',
       },
     },
+    primarylanguage_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'language',
+        key: 'id',
+      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
