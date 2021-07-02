@@ -5,13 +5,12 @@
       {{#each categories as |category|}}
         <div class="container">
           <div class="card">
-
             <div class="contentBx">
-              <h2>{{catName}}</h2>
+              <h2>{{category.category_name}}</h2>
               <div class="size">
-                <h3>{{description}}</h3>
+                <h3>{{category.description}}</h3>
               </div>
-              <a href="#">let's go!</a>
+              <a href="/login">let's go!</a>
             </div>
           </div>
         </div>
