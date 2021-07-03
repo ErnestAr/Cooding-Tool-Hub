@@ -30,18 +30,33 @@ router.get('/page', withAuth, async (req, res) => {
 });
 
 
-router.get(`/edit/:id`, async (req, res) => {
-  if (req.session.logged_in) {
-    const dbUserData = await User.findByPk(req.session.user_id)
-    const userData = dbUserData.get({ plain: true })
-    res.render('account-edit', {userData})
-    return
-  }
-  res.render('login')
+
+
+router.get(`/edit/:id`, withAuth, async (req, res) => {
+    try {
+      const dbUserData = await User.findByPk(req.session.user_id)
+      const userData = dbUserData.get({ plain: true })
+      res.render('account-edit', {userData})
+    } catch (error) {
+      res.render('login')
+    }
+
 })
 
+router.get(`/addnew`, withAuth, async (req, res) => {
+  try {
+    res.render('form')
+  } catch (error) {
+    res.render('login')
+  }
 
+})
 module.exports = router;
+
+
+
+
+
 
 
 
