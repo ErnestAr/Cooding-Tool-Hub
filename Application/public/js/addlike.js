@@ -4,9 +4,8 @@ const addLike = async (event) => {
   const techId = document.getElementById('tech-card')
   const elId = dataset.techId
 
-  const response = await fetch(`/api/tech/${techid}/addlike`, {
+  const response = await fetch(`/api/tech/${elId}`, {
     method: 'PUT',
-    body: JSON.stringify({ techName, techDesc, techProject, category }),
     headers: { 'Content-Type': 'application/json' }
   });
 }
