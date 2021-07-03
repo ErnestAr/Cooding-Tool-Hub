@@ -10,13 +10,13 @@ body{
 }
 
 
+
 .context {
     width: 100%;
     position: absolute;
     justify-content: center;
     top: 25%;
     padding: 10px;
-    
 }
 
 .context h1{
@@ -32,8 +32,7 @@ body{
     width: 100%;
     height: auto;
     top: 50%;
-    
-   
+
 }
 
 .circles{

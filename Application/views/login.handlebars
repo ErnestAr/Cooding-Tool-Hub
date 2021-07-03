@@ -1,28 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {{!-- need proper routing for the css link --}}
-    <link rel="stylesheet" href="stylesheet.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="area" >
-        <ul class="circles">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-        </ul>
-</div >
+
 {{!-- need to add button id // change input id if need be --}}
     <div class="context">
         <section class="forms-section">
@@ -59,6 +35,10 @@
                       <label for="signup-email">E-mail</label>
                       <input id="signup-email" type="email" required>
                     </div>
+                      <div class="input-block">
+                      <label for="signup-username">Username</label>
+                      <input id="signup-username" type="username" required>
+                    </div>
                     <div class="input-block">
                       <label for="signup-password">Password</label>
                       <input id="signup-password" type="password" required>
@@ -74,8 +54,6 @@
             </div>
           </section>
     </div>
+    <script src="/js/login.js"></script>
 
 {{!-- need the proper routing for the src file --}}
-    <script src="script.js"></script>
-</body>
-</html>

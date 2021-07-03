@@ -1,13 +1,5 @@
 // Get all the tech in the category
 const contelements = document.getElementsByClassName("card");
-const openCategory =   (e) => {
-    let currentPost = e.currentTarget
-    console.log(currentPost);
-    const currentId = currentPost.getAttribute("id")
-    console.log(currentId);
-    document.location.replace(`/category/${currentId}`)
-}
-
 
 // save tech to user's table
 const saveTech = async (event) => {
@@ -27,10 +19,10 @@ const saveTech = async (event) => {
   }
 };
 
-
 document
   .querySelector('#save-tech')
   .addEventListener('click', saveTech)
+
 for (let i = 0; i < contelements.length; i++) {
   contelements[i].addEventListener('click', openCategory, false);
 }

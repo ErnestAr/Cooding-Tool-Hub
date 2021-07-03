@@ -2,18 +2,25 @@ const { Category } = require('../models');
 
 const categorydata = [
   {
-    category_name: 'Animation',
+    category_name: 'Web Animation',
   },
   {
-    category_name: '3D Printing',
+    category_name: 'Web Scraping',
   },
   {
-    category_name: 'Front end',
+    category_name: 'Front End Frameworks',
   },
   {
-    category_name: 'Back end',
+    category_name: 'Full Stack Frameworks',
+  },
+  {
+    category_name: 'Website Deployement',
+  },
+  {
+    category_name: 'Source Control',
   },
 ];
+
 
 const seedCategory = () => Category.bulkCreate(categorydata);
 

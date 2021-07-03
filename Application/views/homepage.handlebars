@@ -1,133 +1,19 @@
-<!DOCTYPE html>
-<html>
-<title>cth</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel='stylesheet' href="stylesheet.css">
-<link rel="stylesheet" href="cardStylesheet.css">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1 {font-family: "Montserrat", sans-serif}
-img {margin-bottom: -7px}
-.w3-row-padding img {margin-bottom: 12px}
-</style>
-<body>
-  <div class="area" >
-    <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-    </ul>
-  </div>
 
-<!-- Sidebar -->
-<nav>
-	<a href="#">Home</a>
-	<a href="#">personal</a>
-	<a href="#">Login</a>
-	<div class="animation start-home"></div>
-</nav>
-
-<!-- !PAGE CONTENT! -->
-<!-- <div class="w3-content" style="max-width:1500px"> -->
-
-<!-- Header -->
-<!-- <div class="w3-opacity">
-<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> 
-<div class="w3-clear"></div> -->
-<header class="w3-center w3-margin-bottom">
-  <h1><img src="LogoMakr-3NLdKH.png"></h1>
-</header>
-</div>
-
-<!-- Photo Grid -->
-<div class="w3-content">
-  <div class="w3-row">
-    
-    <div class="w3-quarter">
-      <div class="container">
-        <div class="card">
-          <div class="imgBx">
-            <img src={{catImg}}>
-          </div>
-          <div class="contentBx">
-            <h2>{{catName}}</h2>
-            <div class="size">
-              <h3>{{description}}</h3>
+{{!-- <div class="w3-content">
+  <div class="w3-row"> --}}
+    <div class="all-cards">
+      {{#each categories as |category|}}
+        <div class="container">
+          <div class="card">
+            <div class="contentBx">
+              <h2>{{category.category_name}}</h2>
+              <a href="/homepage-category">let's go!</a>
             </div>
-            <a href="#">let's go!</a>
           </div>
         </div>
-      </div>
-      
+      {{/each}}
     </div>
+      {{!-- </div>
+    </div> --}}
 
-    <div class="w3-quarter">
-      <div class="container">
-        <div class="card">
-          <div class="imgBx">
-            <img src={{catImg}}>
-          </div>
-          <div class="contentBx">
-            <h2>{{catName}}</h2>
-            <div class="size">
-              <h3>{{description}}</h3>
-            </div>
-            <a href="#">let's go!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="w3-quarter">
-      <div class="container">
-        <div class="card">
-          <div class="imgBx">
-            <img src={{catImg}}>
-          </div>
-          <div class="contentBx">
-            <h2>{{catName}}</h2>
-            <div class="size">
-              <h3>{{description}}</h3>
-            </div>
-            <a href="#">let's go!</a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="w3-quarter">
-      <div class="container">
-        <div class="card">
-          <div class="imgBx">
-            <img src={{catImg}}>
-          </div>
-          <div class="contentBx">
-            <h2>{{catName}}</h2>
-            <div class="size">
-              <h3>{{description}}</h3>
-            </div>
-            <a href="#">let's go!</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  
-
-<!-- End Page Content -->
-</div>
-
-<!-- Footer -->
-</body>
-</html>

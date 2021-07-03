@@ -4,15 +4,30 @@
 *{
   font-family: 'Poppins', sans-serif;
 }
+.all-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  top: 100px;
+  margin: 0px;
+  width: 100%;
+
+}
 
 .container{
+  flex: 0 0 20%;
   position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .container .card{
   position: relative;
-  width: 320px;
-  height: 450px;
+  margin-bottom: 20px;
+  width: 240px;
+  height: 350px;
   background: #07575b;
   border-radius: 20px;
   overflow: hidden;
@@ -34,16 +49,7 @@
   clip-path: circle(300px at 80% -20%);
 }
 
-/* .container .card:after{
-  content: 'Nike';
-  position: absolute;
-  top: 30%;
-  left: -20%;
-  font-size: 12em;
-  font-weight: 800;
-  font-style: italic;
-  color: rgba(255,255,25,0.05)
-} */
+
 
 .container .card .imgBx{
   position: absolute;
@@ -143,26 +149,7 @@
   background: #9bdc28;
 }
 
-/* .container .card .contentBx .color span{
-  width: 20px;
-  height: 20px;
-  background: #ff0;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
 
-.container .card .contentBx .color span:nth-child(2){
-  background: #9bdc28;
-}
-
-.container .card .contentBx .color span:nth-child(3){
-  background: #03a9f4;
-}
-
-.container .card .contentBx .color span:nth-child(4){
-  background: #e91e63;
-} */
 
 .container .card .contentBx a{
   display: inline-block;

@@ -1,13 +1,12 @@
 const router = require('express').Router();
-const { User, Tech, Category,} = require('../models');
+const { User, Tech,} = require('../models');
 const withAuth = require('../utils/auth');
 const userTech = require('../models/userTech');
 
 //GEt all the created and saved posts on user interface
-router.get('/',  async (req, res) => {
+router.get('/page', withAuth, async (req, res) => {
     try {
       const dbUserData = await User.findOne( {
-       
         include: [{
           model: Tech,
           through:userTech, as:'tech'
@@ -15,36 +14,21 @@ router.get('/',  async (req, res) => {
         {model:Tech}
       ],
         where: {
-          id: req.body.user_id
-         },
+          id: req.session.user_id
+        },
       });
-
-      const userInfo = dbUserData.get({ plain: true });
-
+      const usertechs = dbUserData.get({ plain: true });
       // placeholder account page
-      res.render('account', {
-        userInfo,
+      res.render('accountpage', {
+        usertechs,
         loggedIn: req.session.loggedIn,
       });
-      res.status(200).json(userInfo)
-      
     } catch (err) {
       console.log(err);
-      res.status(500).json(err);
+     res.status(500).json(err)
     }
 });
 
-
-router.get('/login', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/');
-    return;
-  }
-
-  res.render('login');
-});
-
-module.exports = router;
 
 router.get(`/edit/:id`, async (req, res) => {
   if (req.session.logged_in) {
@@ -53,9 +37,11 @@ router.get(`/edit/:id`, async (req, res) => {
     res.render('account-edit', {userData})
     return
   }
-
   res.render('login')
 })
+
+
+module.exports = router;
 
 
 

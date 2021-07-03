@@ -1,0 +1,43 @@
+<div>
+    <div class="w3-content">
+        <div class="w3-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="our-team">
+                            <div class="picture">
+                            <img class="img-fluid" src={{userInfos.userImg}}>
+                            </div>
+                            <div class="team-content">
+                            <h3 class="name">{{userInfouserName}}</h3>
+                            <h4 class="title">{{userEmail}}</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id='user-repos'class="card">
+        <div>
+            <button class="name noselect">ADD</button>
+        </div>
+        <div class="h3-titles">
+            <div class="div-titles">user-repos</div>
+        </div>
+        <!-- loop to get all created repo -->
+        {{userRepos}}   
+    </div>
+    
+    <div id="user-add" class="card">
+        <div>
+            <button class="name noselect">ADD</button>
+        </div>
+    <div class="h3-titles">
+        <div class="div-titles">user-additions</div>
+    </div>
+    <!-- loop to get all added techs -->
+    {{userAdditions}}
+</div>
