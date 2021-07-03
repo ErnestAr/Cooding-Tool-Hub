@@ -11,46 +11,49 @@
 <link rel="stylesheet" href="/css/loginStylesheet.css">
 <link rel="stylesheet" href="/css/formStylesheet.css">
 
+{{!-- If page is account/page use stylesheet profile page instead of login --}}
+
+
 <style>
 body,h1 {font-family: "Montserrat", sans-serif}
-img {margin-bottom: -7px}
 .w3-row-padding img {margin-bottom: 12px}
 </style>
 <body>
   <div class="area" >
     <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
     </ul>
   </div>
-<!-- Sidebar -->
-<nav>
-	<a href="/category">Home</a>
-	<a href="/account">personal</a>
-	<a href="/login">Login</a>
-	<div class="animation start-home"></div>
-</nav>
-
-<!-- !PAGE CONTENT! -->
-<!-- <div class="w3-content" style="max-width:1500px"> -->
-
-<!-- Header -->
-<!-- <div class="w3-opacity">
-<span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"> <i class="fa fa-bars"></i></span> 
-<div class="w3-clear"></div> -->
-<header class="w3-center w3-margin-bottom">
-  <h1><img src="/images/LogoMakr-3NLdKH.png"></h1>
-</header>
 
 
+{{!-- Navigation bar --}}
+
+
+  <header >
+    <nav>
+      <a href="/category">Home</a>
+      <a href="/account/page">Personal</a>
+      {{#if loggedIn}}
+        <a href="#" id="logout">Logout</a>
+        {{else}}
+        <a href="/login">Login</a>
+        {{/if}}
+      <div class="animation start-home"></div>
+    </nav>
+    <h1><img src="/images/LogoMakr-3NLdKH.png"></h1>
+  </header>
+    {{{body}}}
+    {{#if loggedIn}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
 </body>
-{{{body}}}
 </html>

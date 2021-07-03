@@ -7,14 +7,17 @@
 .all-cards {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 300px;
-  left: 8.5%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  top: 100px;
   margin: 0px;
+  width: 100%;
+
 }
 
 .container{
-  flex: 25%;
+  flex: 0 0 20%;
   position: relative;
   margin-left: 20px;
   margin-right: 20px;
@@ -22,8 +25,9 @@
 
 .container .card{
   position: relative;
-  width: 320px;
-  height: 450px;
+  margin-bottom: 20px;
+  width: 240px;
+  height: 350px;
   background: #07575b;
   border-radius: 20px;
   overflow: hidden;
