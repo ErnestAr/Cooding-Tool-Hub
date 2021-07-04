@@ -3,6 +3,7 @@ const { Tech, User, Category } = require('../../models');
 const { sequelize } = require('../../models/userTech');
 const UserTech = require('../../models/userTech');
 
+
 router.post('/', async (req, res) => {
     try {
       const dbUserData = await Tech.create({
@@ -22,12 +23,12 @@ router.post('/', async (req, res) => {
     }
   });
 
-// add like to tech id, route works but is a placeholder
+// add vote to tech id, route works but is a placeholder
 router.put('/:id', async (req, res) => {
   try {
     const dbTechData = await Tech.update(
       {
-        likes: sequelize.literal('likes + 1')
+        votes: sequelize.literal('votes + 1')
       },
       {
         where: {
@@ -40,6 +41,16 @@ router.put('/:id', async (req, res) => {
     res.status(400).json(err)
   }
 });
+
+router.get('/:id', async (req, res) => {
+  try {
+    const dbUserTechData = await UserTech.findByPk(req.params.id)
+    const userTech = dbUserTechData.get({ plain: true })
+    res.status(200).json(UserTech)
+  } catch (error) {
+    res.status(400).json(err)
+  }
+})
 
 
 router.delete("/:id", async (req, res) => {

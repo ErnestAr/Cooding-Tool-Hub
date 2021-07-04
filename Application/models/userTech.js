@@ -25,7 +25,7 @@ userTech.init(
         key: 'id'
       }
     },
-    voted: {
+    saved: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
     }
