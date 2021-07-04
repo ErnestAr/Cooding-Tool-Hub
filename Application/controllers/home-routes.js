@@ -1,6 +1,7 @@
 const router = require('express').Router();
-const { Category, Tech} = require('../models');
+const { Category, Tech, User, } = require('../models');
 const userTech = require('../models/userTech');
+const Language = require('../models/Language')
 
 
 // GET all categories for homepage
@@ -29,11 +30,17 @@ router.get('/category/:id', async (req, res) => {
         include: [
           {
             model: Tech,
+            include: [
+              { 
+                model: User,
+                model: Language
+              }
+             
+            ]
           },
         ],
       });
       const category = dbCategoryData.get({ plain: true });
-
       res.render('homepage-category', {
         category,
         loggedIn: req.session.loggedIn,
