@@ -41,7 +41,7 @@ router.get('/category/:id', async (req, res) => {
         ],
       });
       const category = dbCategoryData.get({ plain: true });
-      res.render('homepage-category', {
+      res.render('tech', {
         category,
         loggedIn: req.session.loggedIn,
       });
