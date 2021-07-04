@@ -43,7 +43,7 @@ router.get(`/edit/:id`, withAuth, async (req, res) => {
 
 })
 
-router.get(`/addnew`, withAuth, async (req, res) => {
+router.get(`/addnew`, async (req, res) => {
   try {
     res.render('form')
   } catch (error) {

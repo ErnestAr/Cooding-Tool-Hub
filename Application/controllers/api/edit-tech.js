@@ -6,12 +6,14 @@ const UserTech = require('../../models/userTech');
 router.post('/', async (req, res) => {
     try {
       const dbUserData = await Tech.create({
-        tech_name: req.body.tech_name,
-        description: req.body.description,
-        project: req.body.project,
-        source: req.body.source,
-        category_id: req.body.category_id,
-        user_id: req.session.user_id
+        // techTitle, techDesc, techProject, techCategory, techLanguage
+        tech_name: req.body.techTitle,
+        description: req.body.techDesc,
+        examples: req.body.techProject,
+        source: req.body.techSource,
+        category_id: req.body.techCategory,
+        language_id: req.body.techLanguage,
+        user_id: 1,
       })
       res.status(200).json(dbUserData);
     } catch (err) {
