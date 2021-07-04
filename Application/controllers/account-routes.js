@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { User, Tech,} = require('../models');
 const withAuth = require('../utils/auth');
 const userTech = require('../models/userTech');
+const Language = require('../models/Language');
 
 //GEt all the created and saved posts on user interface
 router.get('/page', withAuth, async (req, res) => {
@@ -11,14 +12,18 @@ router.get('/page', withAuth, async (req, res) => {
           model: Tech,
           through:userTech, as:'tech'
         },
-        {model:Tech}
+        {model:Tech,
+        include: [
+          {
+          model: Language,
+          }
+        ]}
       ],
         where: {
           id: req.session.user_id
         },
       });
       const usertechs = dbUserData.get({ plain: true });
-      // placeholder account page
       res.render('accountpage', {
         usertechs,
         loggedIn: req.session.loggedIn,
