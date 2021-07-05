@@ -7,7 +7,7 @@ const userTech = require('../models/userTech');
 
 
 // GET all categories for homepage
-router.get('/category', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     const dbCategoryData = await Category.findAll({
     });
