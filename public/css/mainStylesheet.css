@@ -761,6 +761,7 @@ span {
     color: #fff;
 }
 .our-team {
+  max-width: 400px;
   padding: 30px 0 40px;
   margin-bottom: 30px;
   background-color: #07575b;
@@ -768,7 +769,7 @@ span {
   overflow: hidden;
   position: relative;
   border-radius: 15px;
-  width: 100%;
+  margin-left: 30%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -1189,4 +1190,26 @@ fieldset {
 }
 :-ms-input-placeholder {
  color:#888;
+}
+
+
+#user-repos, #user-add {
+  min-width: 1200px;
+  margin-left: 10%;
+}
+
+.accountdiv {
+  position: relative;
+  top: 80px
+}
+
+
+.plusbutton {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  background: none;
+  top: 15px;
+  right: 15px;
+  margin: 0;
 }
