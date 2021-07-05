@@ -37,11 +37,11 @@ router.get('/page', withAuth, async (req, res) => {
 
 
 
-router.get(`/edit/:id`, withAuth, async (req, res) => {
+router.get(`/editprofile`, withAuth, async (req, res) => {
     try {
       const dbUserData = await User.findByPk(req.session.user_id)
       const userData = dbUserData.get({ plain: true })
-      res.render('account-edit', {userData})
+      res.render('editprofile', {userData})
     } catch (error) {
       res.render('login')
     }
