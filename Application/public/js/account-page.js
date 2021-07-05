@@ -16,9 +16,15 @@ const deleteTech = async (event) => {
 };
 
 const editProfile = (event) => {
-  document.location.replace("account/editprofile")
-
+  document.location.replace("/account/editprofile")
+  
 }
+
+const addTech = (event) => {
+  document.location.replace("/account/addnew")
+  
+}
+
 
 // document
 //   .querySelector('#delete-tech')
@@ -27,6 +33,11 @@ const editProfile = (event) => {
 document
   .querySelector('#editprofile')
   .addEventListener('click', editProfile)
+
+
+  document
+  .querySelector('#addtech')
+  .addEventListener('click', addTech)
 
 
 
