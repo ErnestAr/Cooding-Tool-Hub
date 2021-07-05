@@ -25,6 +25,7 @@ router.get('/category', async (req, res) => {
 
 //GEt one Category and all related technologies by id
 router.get('/category/:id', async (req, res) => {
+
     try {
       const dbCategoryData = await Category.findByPk(req.params.id, {
         include: [
@@ -34,13 +35,13 @@ router.get('/category/:id', async (req, res) => {
               { 
                 model: User,
                 model: Language
-              }
-             
+              },
             ]
           },
         ],
       });
       const category = dbCategoryData.get({ plain: true });
+
       res.render('tech', {
         category,
         loggedIn: req.session.loggedIn,
@@ -55,13 +56,12 @@ router.get('/category/:id', async (req, res) => {
 router.post(`/category`, async (req, res) => {
   try {
     const TechData = await userTech.create({
-      tech_id: req.body.tech_id,
-      user_id: req.body.user_id
+      tech_id: req.body.techId,
+      user_id: req.session.user_id,
     });
-    res.status(200).json(TechData)
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.alert("Already saved!")
   }
 });
 
