@@ -57,7 +57,7 @@ body{
     height: 20px;
     background: #66A5AD;
     animation: animate 25s linear infinite;
-    bottom: -150px;
+    bottom: -200px;
     
 }
 
@@ -261,6 +261,7 @@ h1 {
 	font-family: 'Cherry Swash', cursive;
 }
 
+
 p {
     position: absolute;
     bottom: 20px;
@@ -390,6 +391,7 @@ span {
 	padding: 30px 25px;
   border-radius: 5px;
 	transform-origin: top;
+  min-height: 400px;
 }
 
 .form-login {

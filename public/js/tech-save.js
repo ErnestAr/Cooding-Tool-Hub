@@ -1,17 +1,4 @@
-// get tech saved count
-// const getTechSavedCount = async (event) => {
-//   event.preventDefault()
-//   const techId = document.getElementById('addtech')
-//   const elId = dataset.techId
-//   const response = await fetch(`/api/tech/${elId}`, {
-//     method: 'GET',
-//     headers: { 'Content-Type': 'application/json' }
-//   })
-// };
-// // on window load run the function above
-// window.onload(getTechSavedCount)
 
-// save tech to user's table
 const saveTech = async (event) => {
   event.preventDefault()
 
