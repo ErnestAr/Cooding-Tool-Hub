@@ -852,7 +852,7 @@ span {
 }
 
 
-  .card1 {
+  .card {
     position: relative;
     min-width: 200px;
     width: 80%;
@@ -866,7 +866,7 @@ span {
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   
-  .card1-img {
+  .card-img {
     width: 100%;
     height: 200px;
     background: var(--color4);
@@ -874,11 +874,11 @@ span {
     border-radius: inherit;
   }
   
-  .card1-category {
+  .card-category {
     font-size: 0.8rem;
   }
   
-  .card1-heading {
+  .card-heading {
     margin: 4px 0 12px;
   }
   

@@ -23,12 +23,12 @@ router.post('/', async (req, res) => {
     }
   });
 
-// add vote to tech id, route works but is a placeholder
+// add vote to tech id 
 router.put('/:id', async (req, res) => {
   try {
     const dbTechData = await Tech.update(
       {
-        votes: sequelize.literal('votes + 1')
+        saved_count: sequelize.literal('saved_count + 1')
       },
       {
         where: {

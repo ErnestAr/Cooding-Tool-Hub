@@ -16,7 +16,8 @@ userTech.init(
       references: {
         model: 'user',
         key: 'id'
-      }
+      },
+      
     },
     tech_id: {
       type: DataTypes.INTEGER,
