@@ -945,11 +945,6 @@ span {
     color: white;
   }
 
-  #techcardlanguage {
-    position: relative;
-    left: 300px;
-    bottom: 60px;
-  }
   
   span{
     position: relative;
@@ -1245,4 +1240,30 @@ fieldset {
   top: 15px;
   right: 15px;
   margin: 0;
+}
+
+
+
+#techcardlanguage {
+  position: relative
+}
+
+
+#updatetime {
+  position: relative;
+  left: 620px;
+}
+
+.savebuttonicon {
+  height: 50px;
+width: 50px;
+position: absolute;
+background: none;
+top: 20px;
+right: 15px;
+margin: 0;
+}
+
+#techcardtitle {
+  color: #67ecc2;
 }
