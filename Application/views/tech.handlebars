@@ -5,16 +5,15 @@
             <button class="name noselect" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}">Save</button>
         </div>
         <div class="h3-titles">
-            <div class="div-titles" id="techcarduseremail">{{tech.user.username}}</div>
+            <div class="div-titles" id="techcarduseremail"><p>{{tech.user.username}}</p></div>
         </div>
         <p class="card-category" id="techcarddate">{{tech.updatedAt}}</p>
         <h3 class="card-heading" id="techcardtitle">{{tech.title}}</h3>
-        <p>
+      
         <h3 class="card-heading" id="techcarddescription">Description</h3>
-          {{tech.description}}
-        </p>
+         {{tech.description}}
         <p>
-        <h3 class="card-heading">Examples</h3>
+        <h3 class="card-heading">Samples</h3>
           {{tech.examples}}
         </p>
         <h3 class="card-heading" id="techcardlanguage">{{tech.language.language_name}}</h3>
@@ -22,5 +21,6 @@
   {{/each}}
 </div>
 <script src="/js/tech-save.js"></script>
+
 
 

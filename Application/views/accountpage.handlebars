@@ -25,11 +25,11 @@
             <div class="div-titles">Created Posts</div>
         </div>
         {{!-- All  created  --}}
-           <fieldset>
+        <fieldset>
             <button name="submit" type="submit" id="addtech" data-submit="...Sending">Add New</button>
-          </fieldset>
+        </fieldset>
         {{#each usertechs.teches as |tech|}}
-            <div id='user-repos'class="card">
+            <div id='user-repos'class="card1">
                 <div class="h3-titles">
                     <div class="div-titles" id="techcarduseremail">{{tech.user.username}}</div>
                 </div>
@@ -47,7 +47,7 @@
             </div>
         {{/each}}   
     </div>
-    <div id="user-add" class="card">
+    <div id="user-add" class="card1">
     <div class="h3-titles">
         <div class="div-titles">Saved Posts</div>
     </div>

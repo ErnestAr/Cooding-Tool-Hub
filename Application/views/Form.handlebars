@@ -1,19 +1,19 @@
-    <div class="container">  
+<div class="container1">  
         <form id="contact" action="" method="post">
           <h3>Add Your Project!</h3>
           <h4>Please Fill Out The Following</h4>
           <fieldset>
-            <input placeholder="Title" type="text" tabindex="2" id="title" required>
+            <input placeholder="Title" type="email" tabindex="2" required>
           </fieldset>
-      
-            <label for="languages">Choose primary user side language:</label>
+          <fieldset>
+            <label for="languages"><h4>Choose primary user side language:</h4></label>
             <select name="languages" id="language" >
               <option value="2">HTML</option>
               <option value="1">CSS</option>
               <option value="3">JavaScript</option>
               <option value="4">Python 3</option>
             </select>
-            <label for="categories">Choose category for this technology:</label>
+            <label for="categories"><h4>category for this technology:</h4></label>
             <select name="categories" id="category" >
               <option value="1">Web Animation</option>
               <option value="2">Web Scraping</option>
@@ -22,20 +22,24 @@
               <option value="5">Website Deployment</option>
               <option value="6">Source Control</option>
             </select>
-          
-          <fieldset>
-            <input placeholder=" link you application (Your Web Site starts with http://)" type="url" tabindex="4" id="source" required>
           </fieldset>
           <fieldset>
-            <textarea placeholder="Description" tabindex="5" id="desc" required></textarea>
+            <input placeholder=" Link to documentation (Your Web Site starts with http://)" type="url" tabindex="4" required>
           </fieldset>
           <fieldset>
-            <textarea placeholder="Project (optional)" tabindex="5" id="project" required></textarea>
+            <textarea placeholder="Description" tabindex="5" required></textarea>
+          </fieldset>
+          <fieldset>
+            <textarea placeholder="Example(Optional if none enter N/A)" tabindex="5" required></textarea>
           </fieldset>
           <fieldset>
             <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
           </fieldset>
         </form>
       </div>
- <script src="/js/addnewtech.js"></script>
+<script src="/js/addnewtech.js"></script>
+
+
+
+
 
