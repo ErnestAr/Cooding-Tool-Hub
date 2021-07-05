@@ -1,6 +1,6 @@
-    
+<div class=" techcontainer">   
   {{#each category.teches as |tech|}}
-    <div id='user-repos'class="card">
+    <div id='user-repos'class="card1">
         <div>
             <button class="name noselect" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}">Save</button>
         </div>
@@ -16,11 +16,11 @@
         <p>
         <h3 class="card-heading">Examples</h3>
           {{tech.examples}}
-
         </p>
         <h3 class="card-heading" id="techcardlanguage">{{tech.language.language_name}}</h3>
     </div>
   {{/each}}
-  <script src="/js/tech-save.js"></script>
+</div>
+<script src="/js/tech-save.js"></script>
 
 

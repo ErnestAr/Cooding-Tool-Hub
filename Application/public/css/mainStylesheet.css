@@ -548,19 +548,35 @@ span {
 	transform: translateX(30%);
 }
 
+.all-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+  top: 100px;
+  margin: 0px;
+  width: 100%;
+
+}
+
+.container{
+  flex: 0 0 20%;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .container .card{
-    position: relative;
-    width: 320px;
-    height: 450px;
-    background: #07575b;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  }
-  .container{
-    position: relative;
-    border-radius: 5%;
-  }
+  position: relative;
+  margin-bottom: 20px;
+  width: 240px;
+  height: 350px;
+  background: #07575b;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
   .container .card:before{
     content: '';
     position: absolute;
@@ -850,19 +866,24 @@ span {
 .name {
     color: white;
 }
+.techcontainer {
+  position: relative;
+  top: 200px !important;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
 
+}
 
   .card1 {
     position: relative;
-    min-width: 200px;
-    width: 80%;
+    max-width: 1000px;
     border-radius: 8px;
     padding: 12px 8px 24px 8px;
     overflow: hidden;
     background: #07575b;
     display: block;
-    margin-top: 70px;
-    margin-left: 10%;
+    margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   }
   
