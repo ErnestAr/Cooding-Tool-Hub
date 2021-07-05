@@ -65,7 +65,7 @@ router.post('/logout', (req, res) => {
 });
 
 // Edit account
-router.put(`/edit/:id`, async (req, res) => {
+router.put(`/edit`, async (req, res) => {
   try {
     const userData = await User.update(
     {
@@ -74,15 +74,11 @@ router.put(`/edit/:id`, async (req, res) => {
       password: req.body.password
     },
     {
-      where: {
-        id: req.params.id
-      }
+      where: {id: 1} 
     })
-    // const dbUserData = await User.findByPk(req.session.user_id)
-    // const userInfo = dbUserData.get({ plain: true })
-    res.status(200).json(userData)
+    res.status(200).json(userData);
   } catch (err) {
-    console.log(error)
+    console.log(err)
     res.status(400).json(err)
   }
 })
