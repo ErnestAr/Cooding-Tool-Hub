@@ -23,7 +23,7 @@ router.post('/', async (req, res) => {
     }
   });
 
-// add vote to tech id, route works but is a placeholder
+// add vote to tech id
 router.put('/:id', async (req, res) => {
   try {
     const dbTechData = await Tech.update(

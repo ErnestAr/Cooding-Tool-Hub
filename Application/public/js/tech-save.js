@@ -1,6 +1,5 @@
 // get tech saved count
-const getTechSavedCount = async (event) => {
-  event.preventDefault()
+const getTechSavedCount = async => {
   const techId = document.getElementById('tech-card')
   const elId = dataset.techId
   const response = await fetch(`/api/tech/${elId}`, {
@@ -11,14 +10,12 @@ const getTechSavedCount = async (event) => {
 // on window load run the function above
 window.onload(getTechSavedCount)
 
-document
-.querySelector('.save-tech')
-.addEventListener('click', addLike)
-
 // save tech to user's table
 const saveTech = async (event) => {
   event.preventDefault()
-  // route is a place holder
+  const techId = document.getElementById('tech-card')
+  const elId = dataset.techId
+  // route
   const response = await fetch(`/api/tech/${techId}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' }
