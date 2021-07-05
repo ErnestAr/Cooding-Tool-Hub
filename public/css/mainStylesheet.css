@@ -1226,6 +1226,11 @@ fieldset {
   margin-left: 10%;
 }
 
+.user-repos {
+  min-width: 1200px;
+  margin-left: 10%;
+}
+
 .accountdiv {
   position: relative;
   top: 80px
@@ -1249,11 +1254,7 @@ fieldset {
 }
 
 
-#updatetime {
-  position: relative;
-  left: 1020px;
-  top: 15px;
-}
+
 
 .savebuttonicon {
   height: 50px;
@@ -1269,3 +1270,7 @@ margin: 0;
   color: #67ecc2;
 }
 
+#username1 {
+  position: relative;
+  left: 1000px;
+}

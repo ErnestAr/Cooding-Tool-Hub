@@ -29,21 +29,15 @@
            <img class="plusbutton"  id="addtech" src="/images/akar-icons_circle-plus.png" alt="plus" >
         </fieldset>
         {{#each usertechs.teches as |tech|}}
-            <div class="card1">
-                <div class="h3-titles">
-                    <div class="div-titles" id="techcarduseremail">{{tech.user.username}}</div>
-                </div>
-                <small class="card-category" id="techcarddate">{{tech.updatedAt}}</small>
-                <h3 class="card-heading" id="techcardtitle">{{tech.title}}</h3>
-                <p>
-                <h3 class="card-heading" id="techcarddescription">Description</h3>
-                {{tech.description}}
-                </p>
-                <p>
-                <h3 class="card-heading">Examples</h3>
-                {{tech.examples}}
-                </p>
-                <h3 class="card-heading" id="techcardlanguage">{{tech.language.language_name}}</h3>
+             <div id='user-repos'class="card1">
+                  <div>
+                      <img class="savebuttonicon" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}" src="/images/bi_save.png"></img>
+                  </div>
+                  <h2  id="techcardtitle" >{{tech.tech_name}}</h2>
+                  <h3  id="techcarddescription"> {{tech.description}}</h3>
+                  <h3>{{tech.examples}}</h3>
+                  <h3  id="techcardlanguage" > Programming language: {{tech.language.language_name}}</h3>
+                  <h5 class="card1-head" id="updatetime" >Author:  <solid style="color: rgb(158, 154, 149);">{{tech.user.username}}</solid></h5>
             </div>
         {{/each}}   
     </div>
@@ -53,21 +47,15 @@
     </div>
     {{!-- All  saved --}}
         {{#each usertechs.tech as |tech|}}
-            <div class="card1">
-                <div class="h3-titles">
-                    <div class="div-titles" id="techcarduseremail">{{tech.user.username}}</div>
-                </div>
-                <small class="card-category" id="techcarddate">{{tech.updatedAt}}</small>
-                <h3 class="card-heading" id="techcardtitle">{{tech.title}}</h3>
-                <p>
-                <h3 class="card-heading" id="techcarddescription">Description</h3>
-                {{tech.description}}
-                </p>
-                <p>
-                <h3 class="card-heading">Examples</h3>
-                {{tech.examples}}
-                </p>
-                <h3 class="card-heading" id="techcardlanguage">{{tech.language.language_name}}</h3>
+            <div id='user-repos'class="card1">
+                  <div>
+                      <img class="savebuttonicon" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}" src="/images/bi_save.png"></img>
+                  </div>
+                  <h2  id="techcardtitle" >{{tech.tech_name}}</h2>
+                  <h3  id="techcarddescription"> {{tech.description}}</h3>
+                  <h3>{{tech.examples}}</h3>
+                  <h3  id="techcardlanguage" > Programming language: {{tech.language.language_name}}</h3>
+                  <h5 class="card1-head" id="updatetime" >Author:  <solid style="color: rgb(158, 154, 149);">{{tech.user.username}}</solid></h5>
             </div>
         {{/each}} 
 </div>

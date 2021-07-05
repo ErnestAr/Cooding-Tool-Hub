@@ -1,6 +1,6 @@
         <div class=" techcontainer">   
             {{#each category.teches as |tech|}}
-              <div id='user-repos'class="card1">
+              <div class="card1 user-repos">
                   <div>
                       <img class="savebuttonicon" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}" src="/images/bi_save.png"></img>
                   </div>
@@ -8,7 +8,7 @@
                   <h3  id="techcarddescription"> {{tech.description}}</h3>
                   <h3>{{tech.examples}}</h3>
                     <h3  id="techcardlanguage" > Programming language: {{tech.language.language_name}}</h3>
-                  <h5 class="card1-head" id="updatetime" >Author:  <solid style="color: rgb(158, 154, 149);">{{tech.user.username}}</solid></h5>
+                  <h5 class="card1-head" id="username1" >Author:  <solid style="color: rgb(158, 154, 149);">{{tech.user.username}}</solid></h5>
             </div>
             {{/each}}
         </div>
