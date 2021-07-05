@@ -34,18 +34,21 @@ router.get('/category/:id', async (req, res) => {
             include: [
               { 
                 model: User,
-                model: Language
+                
               },
+              {
+                model: Language,
+              }
             ]
           },
         ],
       });
       const category = dbCategoryData.get({ plain: true });
-
       res.render('tech', {
         category,
         loggedIn: req.session.loggedIn,
       });
+      console.log(category);
     } catch (err) {
       console.log(err);
       res.status(500).json(err);

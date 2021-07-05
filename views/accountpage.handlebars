@@ -12,7 +12,7 @@
                                 <h4 class="title">{{usertechs.email}}</h4>
                             </div>
                             <div>
-                                <button class="name noselect" id="editprofile">Edit </button>
+                                <img  class= "editprofilebutton" id="editprofile" src="/images/akar-icons_edit.png"></img>
                             </div>
                         </div>
                     </div>
@@ -29,48 +29,31 @@
            <img class="plusbutton"  id="addtech" src="/images/akar-icons_circle-plus.png" alt="plus" >
         </fieldset>
         {{#each usertechs.teches as |tech|}}
-            <div class="card1">
-                <div class="h3-titles">
-                    <div class="div-titles" id="techcarduseremail">{{tech.user.username}}</div>
-                </div>
-                <small class="card-category" id="techcarddate">{{tech.updatedAt}}</small>
-                <h3 class="card-heading" id="techcardtitle">{{tech.title}}</h3>
-                <p>
-                <h3 class="card-heading" id="techcarddescription">Description</h3>
-                {{tech.description}}
-                </p>
-                <p>
-                <h3 class="card-heading">Examples</h3>
-                {{tech.examples}}
-                </p>
-                <h3 class="card-heading" id="techcardlanguage">{{tech.language.language_name}}</h3>
+             <div class="card1">
+                  <h2  id="techcardtitle" >{{tech.tech_name}}</h2>
+                  <h3  id="techcarddescription"> {{tech.description}}</h3>
+                  <h3>{{tech.examples}}</h3>
+                  <h3  id="techcardlanguage" > Programming language: {{tech.language.language_name}}</h3>
+                   <a href={{tech.source}} style="font-size: 15px; color: #39A9DB">Resource Page</a>
             </div>
         {{/each}}   
     </div>
-    <div id="user-add" class="card1">
+    <div id="user-add" class="card1" style="margin-bottom: 30px !important;">
     <div class="h3-titles">
         <div class="div-titles" style="font-size: 30px; ">Saved Posts</div>
     </div>
     {{!-- All  saved --}}
         {{#each usertechs.tech as |tech|}}
-            <div class="card1">
-                <div class="h3-titles">
-                    <div class="div-titles" id="techcarduseremail">{{tech.user.username}}</div>
-                </div>
-                <small class="card-category" id="techcarddate">{{tech.updatedAt}}</small>
-                <h3 class="card-heading" id="techcardtitle">{{tech.title}}</h3>
-                <p>
-                <h3 class="card-heading" id="techcarddescription">Description</h3>
-                {{tech.description}}
-                </p>
-                <p>
-                <h3 class="card-heading">Examples</h3>
-                {{tech.examples}}
-                </p>
-                <h3 class="card-heading" id="techcardlanguage">{{tech.language.language_name}}</h3>
+            <div class="card1 " >
+                  <h2  id="techcardtitle" >{{tech.tech_name}}</h2>
+                  <h3  id="techcarddescription"> {{tech.description}}</h3>
+                  <h3>{{tech.examples}}</h3>
+                  <h3  id="techcardlanguage" > Programming language: {{tech.language.language_name}}</h3>
+                  <h5 class="card1-head" id="updatetime" >Author:  <solid style="color: rgb(158, 154, 149);">{{tech.user.username}}</solid></h5>
+                  <a href={{tech.source}} style="font-size: 15px; color: #39A9DB">Resource Page</a>
             </div>
         {{/each}} 
-</div>
+    </div>
   <script src="/js/account-page.js"></script>
 
 

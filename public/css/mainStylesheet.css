@@ -4,13 +4,16 @@
     margin: 0px;
     padding: 0px;
 }
-html {
-    min-height: 1000px;
-}
+
 
 body{
     font-family: 'Exo', sans-serif;
     background-color: #003b46;
+}
+
+.homelink:hover {
+  color: white;
+
 }
 
 
@@ -20,8 +23,9 @@ body{
     justify-content: center;
     top: 25%;
     padding: 10px;
-    
 }
+
+
 
 .context h1{
     text-align: center;
@@ -57,7 +61,7 @@ body{
     height: 20px;
     background: #66A5AD;
     animation: animate 25s linear infinite;
-    bottom: -150px;
+    bottom: -200px;
     
 }
 
@@ -261,6 +265,7 @@ h1 {
 	font-family: 'Cherry Swash', cursive;
 }
 
+
 p {
     position: absolute;
     bottom: 20px;
@@ -390,6 +395,7 @@ span {
 	padding: 30px 25px;
   border-radius: 5px;
 	transform-origin: top;
+  min-height: 400px;
 }
 
 .form-login {
@@ -772,7 +778,7 @@ span {
   overflow: hidden;
   position: relative;
   border-radius: 15px;
-  margin-left: 30%;
+  margin-left: 27%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -780,7 +786,7 @@ span {
   display: inline-block;
   height: 130px;
   width: 130px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   z-index: 1;
   position: relative;
 }
@@ -943,11 +949,6 @@ span {
     color: white;
   }
 
-  #techcardlanguage {
-    position: relative;
-    left: 300px;
-    bottom: 60px;
-  }
   
   span{
     position: relative;
@@ -1229,9 +1230,14 @@ fieldset {
   margin-left: 10%;
 }
 
+.user-repos {
+  min-width: 1200px;
+  margin-left: 10%;
+}
+
 .accountdiv {
   position: relative;
-  top: 80px
+  top: 50px
 }
 
 
@@ -1243,4 +1249,39 @@ fieldset {
   top: 15px;
   right: 15px;
   margin: 0;
+}
+
+
+
+#techcardlanguage {
+  position: relative
+}
+
+
+
+
+.savebuttonicon {
+  height: 50px;
+width: 50px;
+position: absolute;
+background: none;
+top: 20px;
+right: 15px;
+margin: 0;
+}
+
+#techcardtitle {
+  color: #67ecc2;
+}
+
+#username1 {
+  position: relative;
+  left: 1000px;
+}
+
+.editprofilebutton {
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
