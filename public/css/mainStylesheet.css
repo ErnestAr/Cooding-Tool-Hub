@@ -5,7 +5,6 @@
     padding: 0px;
 }
 html {
-    min-height: 1000px;
 }
 
 body{
@@ -774,7 +773,7 @@ span {
   overflow: hidden;
   position: relative;
   border-radius: 15px;
-  margin-left: 30%;
+  margin-left: 27%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
@@ -1233,7 +1232,7 @@ fieldset {
 
 .accountdiv {
   position: relative;
-  top: 80px
+  top: 50px
 }
 
 
@@ -1273,4 +1272,11 @@ margin: 0;
 #username1 {
   position: relative;
   left: 1000px;
+}
+
+.editprofilebutton {
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
