@@ -14,7 +14,7 @@ router.post('/', async (req, res) => {
         source: req.body.techSource,
         category_id: req.body.techCategory,
         language_id: req.body.techLanguage,
-        user_id: 1,
+        user_id: req.session.user_id,
       })
       res.status(200).json(dbUserData);
     } catch (err) {
