@@ -752,13 +752,16 @@ span {
     padding-bottom: 40px;
     width: 25%;
     border: 25%;
-    margin: 5px;
-    margin-right: 5px;
+    margin: 0px;
+    margin-right: 0px;
+    padding-bottom: 0px;
 }
 
 .div-titles {
-    font-size: large;
+    font-size: 20px;
     color: #fff;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 .our-team {
   padding: 30px 0 40px;
@@ -888,17 +891,26 @@ span {
   align-items: center;
   margin-left: 30%;
 }
+.p-1 {
+  color: white;
+}
 
   .card1 {
     position: relative;
     max-width: 1000px;
     border-radius: 8px;
     padding: 12px 8px 24px 8px;
-    overflow: hidden;
+    overflow-wrap: break-word;
     background: #07575b;
     display: block;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    align-self: center;
+    min-width: 1000px;
+    color: lightgray;
   }
   
   .card1-img {
@@ -907,14 +919,33 @@ span {
     background: var(--color4);
     margin-bottom: 32px;
     border-radius: inherit;
+    border-color: white;
+    border-width: 5px;
   }
   
   .card1-category {
     font-size: 0.8rem;
+    padding-top: 5px;
   }
   
   .card1-heading {
     margin: 4px 0 12px;
+    margin-top: 5px;
+    font-size: 50px;
+    color: #66a5ad;
+  }
+
+  .card1-head {
+    margin: 4px 0 12px;
+    margin-top: 5px;
+    font-size: 20px;
+    color: white;
+  }
+
+  #techcardlanguage {
+    position: relative;
+    left: 300px;
+    bottom: 60px;
   }
   
   span{

@@ -1,24 +1,27 @@
-<div class=" techcontainer">   
-  {{#each category.teches as |tech|}}
-    <div id='user-repos'class="card1">
-        <div>
-            <button class="name noselect" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}">Save</button>
+      <div class=" techcontainer">   
+        {{#each category.teches as |tech|}}
+          <div id='user-repos'class="card1">
+              <div>
+                  <button class="name noselect" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}">Save</button>
+              </div>
+              <div class="h3-titles">
+                  <div class="div-titles" id="techcarduseremail">{{tech.user.username}}</div>
+              </div>
+              <h3 class="card1-heading" id="techcardtitle">{{tech.title}}</h3>
+              <p class="p-1">
+                <h3 class="card1-head" id="techcardlanguage">{{tech.language.language_name}}</h3>
+                </p>
+              <p class="p-1">
+              <h3 class="card1-heading" id="techcarddescription"></h3>
+                {{tech.description}}
+              </p>
+              <p class="p-1">
+              <h3 class="card1-heading"></h3>
+                {{tech.examples}}
+              </p>
+              <h3 class="card1-head">{{tech.updatedAt}}</h3>
+
         </div>
-        <div class="h3-titles">
-            <div class="div-titles" id="techcarduseremail"><p>{{tech.user.username}}</p></div>
-        </div>
-        <p class="card-category" id="techcarddate">{{tech.updatedAt}}</p>
-        <h3 class="card-heading" id="techcardtitle">{{tech.title}}</h3>
-      
-        <h3 class="card-heading" id="techcarddescription">Description</h3>
-         {{tech.description}}
-        <p>
-        <h3 class="card-heading">Samples</h3>
-          {{tech.examples}}
-        </p>
-        <h3 class="card-heading" id="techcardlanguage">{{tech.language.language_name}}</h3>
-    </div>
-  {{/each}}
 </div>
 <script src="/js/tech-save.js"></script>
 
