@@ -22,7 +22,6 @@ const editProfile = (event) => {
 
 const addTech = (event) => {
   document.location.replace("/account/addnew")
-  
 }
 
 
