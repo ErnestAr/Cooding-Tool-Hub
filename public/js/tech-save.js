@@ -2,9 +2,8 @@
 const saveTech = async (event) => {
   event.preventDefault()
 
-  const cat = document.querySelector("#addtech")
-  const techCat = cat.dataset.category
-  const techId = cat.dataset.tech
+  const techCat = event.target.dataset.category
+  const techId = event.target.dataset.tech
 
   const response = await fetch('/category', {
     method: 'POST',
@@ -34,10 +33,10 @@ const saveCount = async (techId) => {
 }
 
 
-
-document
-  .querySelector('#addtech')
-  .addEventListener('click', saveTech)
+saveBtn = document.querySelectorAll('.addtech')
+saveBtn.forEach((button) => {
+  button.addEventListener('click', saveTech)
+})
 
 
 

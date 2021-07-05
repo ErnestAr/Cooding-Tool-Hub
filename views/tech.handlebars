@@ -2,7 +2,7 @@
             {{#each category.teches as |tech|}}
               <div class="card1 user-repos">
                   <div>
-                      <img class="savebuttonicon" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}" src="/images/bi_save.png"></img>
+                      <img class="savebuttonicon" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}" data-userId="{{tech.user_id}}" src="/images/bi_save.png"></img>
                   </div>
                   <h2  id="techcardtitle" >{{tech.tech_name}}</h2>
                   <h3  id="techcarddescription"> {{tech.description}}</h3>
