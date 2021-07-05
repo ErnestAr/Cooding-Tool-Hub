@@ -1251,7 +1251,8 @@ fieldset {
 
 #updatetime {
   position: relative;
-  left: 620px;
+  left: 1020px;
+  top: 15px;
 }
 
 .savebuttonicon {
@@ -1267,3 +1268,4 @@ margin: 0;
 #techcardtitle {
   color: #67ecc2;
 }
+

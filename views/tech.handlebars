@@ -4,20 +4,15 @@
                   <div>
                       <img class="savebuttonicon" id="addtech" data-category="{{tech.category_id}}" data-tech="{{tech.id}}" src="/images/bi_save.png"></img>
                   </div>
-                  <div class="h3-titles">
-                      <div class="div-titles" id="techcarduseremail">{{tech.user.username}}</div>
-                  </div>
                   <h2  id="techcardtitle" >{{tech.tech_name}}</h2>
                   <h3  id="techcarddescription"> {{tech.description}}</h3>
                   <h3>{{tech.examples}}</h3>
                     <h3  id="techcardlanguage" > Programming language: {{tech.language.language_name}}</h3>
-                  <h4 class="card1-head" id="updatetime" >{{tech.updatedAt}}</h4>
+                  <h5 class="card1-head" id="updatetime" >Author:  <solid style="color: rgb(158, 154, 149);">{{tech.user.username}}</solid></h5>
             </div>
             {{/each}}
         </div>
     <script src="/js/tech-save.js"></script>
-
-
 
 
 
