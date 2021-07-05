@@ -881,6 +881,13 @@ span {
   color: #000 !important;
 }
 
+.containerprofile {
+  position: relative;
+  top: 200px;
+  max-width: 600px;
+  align-items: center;
+  margin-left: 30%;
+}
 
   .card1 {
     position: relative;
