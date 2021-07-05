@@ -1,4 +1,4 @@
-const  Language = require('../models/Language');
+const  Language = require('../Application/models/Language');
 
 const Languagedata = [
   {
