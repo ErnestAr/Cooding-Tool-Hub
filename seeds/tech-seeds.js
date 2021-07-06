@@ -52,16 +52,6 @@ const techdata = [
     user_id: 1,
   },
   {
-    tech_name: 'Flask',
-    description: 
-    "Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.",
-    source: "https://flask.palletsprojects.com/en/2.0.x/",
-    saved_count: 0,
-    category_id: 4,
-    language_id: 4,
-    user_id: 1,
-  },
-  {
     tech_name: 'React',
     description: 
     "React is a free and open-source front-end JavaScript library for building user interfaces or UI components. It is maintained by Facebook and a community of individual developers and companies.",
@@ -77,7 +67,7 @@ const techdata = [
     "Foundation is a responsive front-end framework. Foundation provides a responsive grid and HTML and CSS UI components, templates, and code snippets, including typography, forms, buttons, navigation and other interface elements, as well as optional functionality provided by JavaScript extensions.",
     source: "https://get.foundation/",
     saved_count: 0,
-    category_id: 3,
+    category_id: 2,
     language_id: 3,
     user_id: 3,
   },
