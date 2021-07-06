@@ -35,8 +35,10 @@ router.get('/category/:id', withAuth, async (req, res) => {
             include: [
               { 
                 model: User,
-                model: Language
               },
+              {
+                model: Language,
+              }
             ]
           },
         ],
