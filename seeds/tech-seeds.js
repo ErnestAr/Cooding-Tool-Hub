@@ -81,6 +81,35 @@ const techdata = [
     language_id: 3,
     user_id: 3,
   },
+  {
+    tech_name: 'Beautiful Soup',
+    description: 
+    "Beautiful Soup is a Python package for parsing HTML and XML documents. It creates a parse tree for parsed pages that can be used to extract data from HTML, which is useful for web scraping. ",
+    source: "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+    saved_count: 0,
+    category_id: 2,
+    language_id: 4,
+    user_id: 2,
+  },
+  {
+    tech_name: 'Scrapy',
+    description: 
+    "Scrapy is a free and open-source web-crawling framework written in Python. Originally designed for web scraping, it can also be used to extract data using APIs or as a general-purpose web crawler. It is currently maintained by Zyte formerly Scrapinghub, a web-scraping development and services company.",
+    source: "https://docs.scrapy.org/en/latest/",
+    saved_count: 0,
+    category_id: 2,
+    language_id: 4,
+    user_id: 2,
+  },
+  {
+    tech_name: 'Heroku',
+    description: 
+    "Heroku is a cloud platform as a service supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go.",
+    source: "https://dashboard.heroku.com/apps",
+    saved_count: 0,
+    category_id: 5,
+    user_id: 2,
+  },
   
 ];
 
