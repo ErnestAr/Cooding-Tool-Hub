@@ -33,7 +33,7 @@ const saveCount = async (techId) => {
 }
 
 
-saveBtn = document.querySelectorAll('.addtech')
+saveBtn = document.querySelectorAll('.savebuttonicon')
 saveBtn.forEach((button) => {
   button.addEventListener('click', saveTech)
 })
