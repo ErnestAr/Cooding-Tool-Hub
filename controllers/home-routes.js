@@ -35,50 +35,84 @@ router.get('/category/:id', withAuth, async (req, res) => {
             include: [
               { 
                 model: User,
-                
+                model: Language
               },
-              {
-                model: Language,
-              }
             ]
           },
         ],
       });
       const category = dbCategoryData.get({ plain: true });
+      // console.log(category)
 
-      // const checkUserSaved = await User.findOne({
-      //   include: [{
-      //     model: Tech,
-      //     through:userTech, as:'tech'
-      //   }],
-      //   where: {
-      //     id: req.session.user_id
-      //   }
-      // })
-      // const userSavedSr = checkUserSaved.get({ plain: true })
-      // let userTechs = userSavedSr.tech[1].userTech
+      const checkUserSaved = await User.findOne({
+        include: [{
+          model: Tech,
+          through:userTech, as:'tech'
+        }],
+        where: {
+          id: req.session.user_id
+        }
+      })
+      const userSavedSr = checkUserSaved.get({ plain: true })
+      let userTechs = userSavedSr.tech
+
+      // console.log('USER TECHS BELOW')
       // console.log(userTechs)
+
+      // console.log(category.teches)
+
+      // const testArray = category.teches.map((element) => {
+      //   {...element, saved: true}})
+      // for (let i = 0; i < category.teches.length; i++){
+      //   category.teches[i].saved = true;
+      // }
+      // console.log(category)
 
       // let checkSaved = async () => {
       //   if (userTechs = []) {
-      //     return true
+      //     for (let i = 0; i < category.teches.length; i++){
+      //       category.teches[i].saved = true;
+      //     }
       //   } else {
       //     for(let i = 0; i < userTechs.length; i++) {
       //       if (userTechs[i].userTech.saved) {
-      //         return true
+      //         for (let i = 0; i < category.teches.length; i++)
+      //         {
+      //           category.teches[i].saved = false;
+      //         }
       //       }
       //     }
-      //   } return false
+      //   } return true
       // }
 
-      // let checkUserSavedHtml = "true"
-      // console.log(checkUserSavedHtml)
-      res.render('tech', {
-        category,
-        loggedIn: req.session.loggedIn,
-        userId: req.session.user_id,
-        // userSavedSr
-      });
+      //function
+      //for loop userTechs
+      // nested for loop for category.teches
+      //if userTechs.id === category.teches.id
+      ////// category.teches[i].saved = true
+
+      let checkSaved = () => {
+        for (let i = 0; i < userTechs.length; i++) {
+          for (let j = 0; j < category.teches.length; j++) {
+            if (userTechs[i].id === category.teches[j].id) {
+              category.teches[j].saved = true
+            }
+          }
+        }
+      }
+
+      checkSaved()
+      console.log(category)
+
+      
+      res.render('tech', 
+        {
+          category,
+          loggedIn: req.session.loggedIn,
+          userId: req.session.user_id,
+        }
+      );
+
     } catch (err) {
       console.log(err);
       res.status(500).json(err);
@@ -101,12 +135,3 @@ router.post(`/category`, async (req, res) => {
 
 
 module.exports = router;
-
-
-
-
-
-
-
-
-
