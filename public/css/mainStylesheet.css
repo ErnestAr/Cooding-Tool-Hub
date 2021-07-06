@@ -27,6 +27,22 @@ body{
 
 
 
+.context {
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  top: 25%;
+  padding: 10px;
+}
+
+
+
+.context h1{
+  text-align: center;
+  color: #fff;
+  font-size: 50px;
+}
+
 
 .circles{
     position: absolute;
