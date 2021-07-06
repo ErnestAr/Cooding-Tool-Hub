@@ -9,6 +9,7 @@
 body{
     font-family: 'Exo', sans-serif;
     background-color: #003b46;
+  
 }
 
 .homelink:hover {
@@ -16,40 +17,23 @@ body{
 
 }
 
-
-.context {
-    width: 100%;
-    position: absolute;
-    justify-content: center;
-    top: 25%;
-    padding: 10px;
+.area {
+  background: #003b46;  
+  background: -webkit-linear-gradient(to left, #66A5AD, #07575B);  
+  width: 100%;
+  min-height: auto;
+  bottom: 0%;
 }
 
 
 
-.context h1{
-    text-align: center;
-    color: #fff;
-    font-size: 50px;
-}
-
-
-.area{
-    background: #003b46;  
-    background: -webkit-linear-gradient(to left, #66A5AD, #07575B);  
-    width: 100%;
-    min-height: auto;
-    bottom: 0%;
-    
-   
-}
 
 .circles{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 1200px;
+    min-height: 1000px;
     overflow: hidden;
 }
 
@@ -61,7 +45,7 @@ body{
     height: 20px;
     background: #66A5AD;
     animation: animate 25s linear infinite;
-    bottom: -200px;
+    bottom: -100px;
     
 }
 
@@ -154,7 +138,7 @@ body{
     100%{
         transform: translateY(-1000px) rotate(720deg);
         opacity: 0;
-        border-radius: 50%;
+        border-radius: 30%;
     }
 
 }
