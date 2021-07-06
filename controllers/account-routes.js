@@ -50,7 +50,7 @@ router.get(`/editprofile`, withAuth, async (req, res) => {
 
 router.get(`/addnew`,  (req, res) => {
   try {
-    res.render('form')
+    res.render('Form')
   } catch (error) {
     res.render('login')
   }
