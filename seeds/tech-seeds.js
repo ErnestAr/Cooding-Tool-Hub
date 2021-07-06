@@ -67,7 +67,7 @@ const techdata = [
     "Foundation is a responsive front-end framework. Foundation provides a responsive grid and HTML and CSS UI components, templates, and code snippets, including typography, forms, buttons, navigation and other interface elements, as well as optional functionality provided by JavaScript extensions.",
     source: "https://get.foundation/",
     saved_count: 0,
-    category_id: 3,
+    category_id: 2,
     language_id: 3,
     user_id: 3,
   },
