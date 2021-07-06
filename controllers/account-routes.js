@@ -10,6 +10,11 @@ router.get('/page', withAuth, async (req, res) => {
       const dbUserData = await User.findOne( {
         include: [{
           model: Tech,
+          include: [
+            {
+            model: Language,
+            }
+          ],
           through:userTech, as:'tech'
         },
         {model:Tech,
@@ -28,6 +33,7 @@ router.get('/page', withAuth, async (req, res) => {
         usertechs,
         loggedIn: req.session.loggedIn,
       });
+      console.log(usertechs);
     } catch (err) {
       console.log(err);
     res.status(500).json(err)
