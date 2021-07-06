@@ -101,16 +101,6 @@ const techdata = [
     language_id: 4,
     user_id: 2,
   },
-  {
-    tech_name: 'Heroku',
-    description: 
-    "Heroku is a cloud platform as a service supporting several programming languages. One of the first cloud platforms, Heroku has been in development since June 2007, when it supported only the Ruby programming language, but now supports Java, Node.js, Scala, Clojure, Python, PHP, and Go.",
-    source: "https://dashboard.heroku.com/apps",
-    saved_count: 0,
-    category_id: 5,
-    user_id: 2,
-  },
-  
 ];
 
 
