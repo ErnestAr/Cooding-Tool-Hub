@@ -1268,6 +1268,12 @@ background: none;
 top: 20px;
 right: 15px;
 margin: 0;
+cursor: pointer;
+transition: 0.5s ease-in-out;
+}
+.savebuttonicon:hover {
+  box-shadow: 3px 3px 10px black;
+
 }
 
 #techcardtitle {
