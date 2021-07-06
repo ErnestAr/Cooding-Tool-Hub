@@ -3,8 +3,12 @@
               <div class="card1 user-repos">
                   <div>
                     {{#unless tech.saved}}
-                      <img class="savebuttonicon" id="addtech" data-category={{tech.category_id}} data-tech={{tech.id}} data-userId={{tech.user_id}} src="/images/bi_save.png"></img>
+                       <img class="savebuttonicon" id="addtech" data-category={{tech.category_id}} data-tech={{tech.id}} data-userId={{tech.user_id}} src="/images/bi_save.png"></img>
+                      {{else}}
+                       <img class="savebuttonicon1" id="addtech" data-category={{tech.category_id}} data-tech={{tech.id}} data-userId={{tech.user_id}} src="/images/eva_checkmark-circle-outline.png"></img>
+
                     {{/unless}}
+
                   </div>
                   <h2  id="techcardtitle" >{{tech.tech_name}}</h2>
                   <h3  id="techcarddescription"> {{tech.description}}</h3>
